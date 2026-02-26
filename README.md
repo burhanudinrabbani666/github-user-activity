@@ -6,10 +6,10 @@ A simple CLI tool to fetch and display GitHub user activity directly in your ter
 
 ## Features
 
-- 🚀 Display recent push commits per repository
-- ✨ Track repository creation and deletion
-- 🍴 Monitor forks, stars, issues, and pull requests
-- ❌ Graceful error handling for invalid users or rate limits
+- Display recent push commits per repository
+- Track repository creation and deletion
+- Monitor forks, stars, issues, and pull requests
+- Graceful error handling for invalid users or rate limits
 
 ## Requirements
 
@@ -37,8 +37,8 @@ npm start <username>
 npm start torvalds
 
 # Output:
-# 🚀 Pushed 3 commits to torvalds/linux
-# ⭐ torvalds starred some-user/some-repo
+# Pushed 3 commits to torvalds/linux
+# torvalds starred some-user/some-repo
 ```
 
 ## Error Handling

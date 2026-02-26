@@ -5,7 +5,7 @@ async function app() {
     const userName = argv.at(2);
     if (!userName)
       throw new Error(
-        "Please provide a username. Usage: node app.js <username> OR npm start <username>",
+        "Please provide a username. Usage: node index.js <username> OR npm start <username>",
       );
 
     const response = await fetch(
@@ -39,7 +39,7 @@ async function app() {
 
     const repoArray = Object.entries(repoMap);
     repoArray.forEach((repo) =>
-      console.log(`🚀 pushed ${repo.at(1)} commits to ${repo.at(0)}`),
+      console.log(`pushed ${repo.at(1)} commits to ${repo.at(0)}`),
     );
 
     //  Other Event
@@ -49,14 +49,14 @@ async function app() {
       const action = repo.payload?.action;
 
       const eventMap = {
-        CreateEvent: `✨ Created new repository ${repoName}`,
-        DeleteEvent: `🗑️  Deleted repository ${repoName}`,
-        ForkEvent: `🍴 ${actor} forked ${repoName}`,
-        IssueCommentEvent: `💬 ${actor} commented on an issue in ${repoName}`,
-        IssuesEvent: `🐛 ${actor} ${action} an issue in ${repoName}`,
-        PullRequestEvent: `🔀 ${actor} ${action} a pull request in ${repoName}`,
-        ReleaseEvent: `🚀 ${actor} published a new release in ${repoName}`,
-        WatchEvent: `⭐ ${actor} starred ${repoName}`,
+        CreateEvent: `Created new repository ${repoName}`,
+        DeleteEvent: `Deleted repository ${repoName}`,
+        ForkEvent: `${actor} forked ${repoName}`,
+        IssueCommentEvent: `${actor} commented on an issue in ${repoName}`,
+        IssuesEvent: `${actor} ${action} an issue in ${repoName}`,
+        PullRequestEvent: `${actor} ${action} a pull request in ${repoName}`,
+        ReleaseEvent: `${actor} published a new release in ${repoName}`,
+        WatchEvent: `${actor} starred ${repoName}`,
       };
 
       const textToRender =
